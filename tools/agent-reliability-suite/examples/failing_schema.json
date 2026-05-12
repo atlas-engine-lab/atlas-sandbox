@@ -1,0 +1,19 @@
+{
+  "tools": [
+    {
+      "name": "fetch_data",
+      "description": "tool",
+      "permissions": ["all"],
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "outputSchema": {
+        "type": "string"
+      }
+    },
+    {
+      "description": "Gets account balance"
+    }
+  ]
+}

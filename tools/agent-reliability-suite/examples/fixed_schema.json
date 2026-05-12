@@ -1,0 +1,25 @@
+{
+  "tools": [
+    {
+      "name": "fetch_customer_balance",
+      "description": "Read-only tool that fetches a customer's current balance by customer_id and returns numeric balance fields for downstream billing workflows.",
+      "permissions": ["billing:read:customer_balance"],
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "customer_id": {"type": "string", "description": "Unique customer identifier"}
+        },
+        "required": ["customer_id"]
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "customer_id": {"type": "string"},
+          "balance_usd": {"type": "number"},
+          "currency": {"type": "string"}
+        },
+        "required": ["customer_id", "balance_usd", "currency"]
+      }
+    }
+  ]
+}
